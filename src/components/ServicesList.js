@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Grid from '@material-ui/core/Grid';
+
 
 import * as contentful from 'contentful'
 
@@ -28,10 +28,9 @@ class ServicesList extends Component {
     render() {
       return (
         <div>
-            <p>This is the Blog Page</p>
             <br/>
             { this.state.posts.map(({fields}, i) =>
-                <pre key={i}>{JSON.stringify(fields, null, 2)}</pre>
+                <Service key={i} {...fields}/>
             )}
         </div>
       )
