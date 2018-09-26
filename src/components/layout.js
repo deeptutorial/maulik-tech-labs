@@ -10,7 +10,6 @@ const Layout = () => {
   return(
     <div>
       < Header />
-      < ServicesList />
     </div>
 )
 }
